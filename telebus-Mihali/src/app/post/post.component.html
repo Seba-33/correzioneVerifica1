@@ -7,4 +7,10 @@ Post di: {{post.nome}}
 
 {{numeroLike}}
 <button (click)="like()">like</button>
-
+<br>
+<textarea #commento ></textarea>
+<button (click)="commenta(commento.value)">commenta</button>
+@for (comm of vettComment; track comm)
+{
+{{vettComment}}
+}

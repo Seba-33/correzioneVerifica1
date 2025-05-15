@@ -10,10 +10,15 @@ import { Post } from '../post.model';
 export class PostComponent {
   @Input() post! : Post;
   numeroLike: number = 0;
+  vettComment : string[] = []
 
   like(){
     this.numeroLike ++;
 
+  }
 
+  commenta(commento : string) {     
+    this.vettComment.push(commento);
+    
   }
 }
